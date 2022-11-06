@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*
+Nav.jsx
+*/
+.navbar__wrapper{
+  padding: 32px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aquamarine;
+  margin-bottom: 32px;
+}
+.nav__link--lists{
+  display: flex;
+  justify-content: space-between;
+}
+li{
+  list-style-type: none;
+  margin-right: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*
+  Movies.jsx
+*/
+.searchbar__wrapper{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+.input__field{
+  margin-right: 24px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  width: 420px;
+}
+.search__button{
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 24px;
+}
+.result{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  left: 148px
+}
+.movie__lists{
+  
+  padding: 24px;
+  border: solid red;
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie__list{
+  width: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie__image{
+  width: 100%;
 }
