@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <div className="home__wrapper">
         <h1 className="home__intro"><span className="intro"><span className="purple">
-            EXPLORE</span> MOVIES HERE!!</span><br></br> Its <span className="purple">free</span> and always will be</h1>
+            EXPLORE</span> MOVIES HERE!!</span><br></br> Its free and <span className="purple">always </span> will be</h1>
         <div className="searchbar__wrapper">
           <input type="text" name="" className="home__searchbar" id="home__input" />
           <button onClick={searchMovie} className="home__searchButton">Search</button>
