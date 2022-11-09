@@ -10,6 +10,12 @@ const Movies = () => {
     fetchMovies();
   }, []);
 
+  async function searchMovie(){
+    const movieTitle = document.getElementById("movies__searchBar").value
+    const { data } = await axios.get(`https://www.omdbapi.com/?apikey=aca2f055&s=${movieTitle}&type=movie&y=?`)
+    setMovies(data.Search)
+    
+}
   async function fetchMovies() {
   
     const { data } = await axios.get(
@@ -22,35 +28,35 @@ const Movies = () => {
   }
  
   
-  const filterBooks =(event) =>{
+  const filterBooks =() =>{
     let sortValue = document.getElementById("filter").value
-    // console.log(sortValue)
-    // if(event.target.value == "YearAscending"){
-    //   console.log("a")
-    //   setMovies(movies.sort((a,b) => a.Year - b.Year))
-    // }else if (event.target.value == "YearDescending"){
-    //  setMovies(movies.sort((a,b) => b.Year - a.Year))
-    // }
-    // console.log(sortValue)
+    setValue(sortValue)
   }
- 
   
   return (
     <div className="movie__list--container">
       <div className="searchbar__wrapper">
         <div className="searchbar">
-          <input type="text" className="input__field" />
-          <button className="search__button">Search</button>
+          <input 
+          onKeyPress={(e) => {
+            if(e.key === "Enter"){
+                document.getElementById("movies__button").click()
+            }
+        }} type="text" className="input__field" id="movies__searchBar"/>
+          <button className="search__button" id="movies__button" onClick={searchMovie}>Search</button>
         </div>
         <p className="result">Search results:</p>
-        <select name="" id="filter" onChange={filterBooks}>
-          <option disabled value="">Sort</option>
+        <select id="filter" onChange={filterBooks} defaultValue={"sort"}>
+          <option disabled value="sort" >Sort</option>
           <option value="YearAscending">YearAscending</option>
           <option value="YearDescending">YearDescending</option>
         </select>
       </div>
       <div className="movie__lists">
-        {movies.map((element, index) => (
+        {
+        currentValue == "YearAscending" ?
+          movies.sort((a, b) => (a.Year - b.Year))
+          .map((element, index) => (
           <div className="movie__list" key={index}>
             <figure className="image__movie--wrapper">
               <img className="movie__image" src={element.Poster} alt="" />
@@ -60,7 +66,21 @@ const Movies = () => {
               <h4>{element.Year}</h4>
             </div>
           </div>
-        ))}
+          ))
+          :
+          movies.sort((a, b) => (b.Year - a.Year))
+          .map((element, index) => (
+          <div className="movie__list" key={index}>
+            <figure className="image__movie--wrapper">
+              <img className="movie__image" src={element.Poster} alt="" />
+            </figure>
+            <div className="movie__data">
+              <h4>{element.Title}</h4>
+              <h4>{element.Year}</h4>
+            </div>
+          </div>
+          ))
+          }
       </div>
     </div>
   );

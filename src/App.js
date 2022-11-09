@@ -3,6 +3,7 @@ import "./App.css";
 import Movies from "./components/Movies.jsx";
 import Nav from "./components/Navbar.jsx";
 import Home from "./components/Homepage.jsx"
+import Footer from "./components/Footer.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //https://www.omdbapi.com/?apikey=aca2f055&s=${movieTitle}&type=movie&y=?
 function App() {
@@ -14,7 +15,9 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="movies" element={<Movies></Movies>}></Route>
         </Routes>
+        
       </div>
+      <Footer></Footer>
     </Router>
   );
 }
