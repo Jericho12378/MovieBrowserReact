@@ -6,9 +6,10 @@ const Home = () => {
     const navigate = useNavigate()
      async function searchMovie(){
         const movieTitle = document.getElementById("home__input").value
-        const { data } = await axios.get(`https://www.omdbapi.com/?apikey=aca2f055&s=${movieTitle}&type=movie&y=?`)
+        //const { data } = await axios.get(`https://www.omdbapi.com/?apikey=aca2f055&s=${movieTitle}&type=movie&y=?`)
         localStorage.setItem("Title", movieTitle)
-        data.Search ? navigate("movies") : alert("No movies found")
+       // data.Search ? navigate("movies") : alert("No movies found")
+       navigate("movies")
     }
   return ( 
     <>
