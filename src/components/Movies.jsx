@@ -2,12 +2,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import React from "react";
 import WarningImage from "./images/no-file.png";
+import { useNavigate } from "react-router-dom";
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const movieTitle__fromHome = localStorage.getItem("Title");
   const [currentValue, setValue] = useState();
   const [loading, setLoading] = useState(true);
   const [movieExist, setMovieState] = useState(true);
+  const navigate = useNavigate()
+  
   useEffect(() => {
     fetchMovies();
   }, []);
@@ -44,6 +47,7 @@ const Movies = () => {
       setMovieState(true);
       setMovieState(true);
       localStorage.removeItem("Title");
+      console.log(data.Search)
     }else{
       setMovieState(false);
     }
@@ -106,7 +110,7 @@ const Movies = () => {
               .map((element, index) => (
                 <div className="movie__list" key={index}>
                   <figure className="image__movie--wrapper">
-                    <img className="movie__image" src={element.Poster} alt="" />
+                    <img className="movie__image" src={element.Poster}  onClick={() => navigate(`${element.imdbID}`)} alt="" />
                   </figure>
                   <div className="movie__data">
                     <h4>{element.Title}</h4>
@@ -120,7 +124,7 @@ const Movies = () => {
               .map((element, index) => (
                 <div className="movie__list" key={index}>
                   <figure className="image__movie--wrapper">
-                    <img className="movie__image" src={element.Poster} alt="" />
+                    <img className="movie__image" src={element.Poster} onClick={() => navigate(`${element.imdbID}`)} alt="" />
                   </figure>
                   <div className="movie__data">
                     <h4>{element.Title}</h4>
