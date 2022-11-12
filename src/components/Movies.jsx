@@ -53,6 +53,7 @@ const Movies = () => {
     }
     
   }
+  
 
   const filterBooks = () => {
     let sortValue = document.getElementById("filter").value;
@@ -105,6 +106,7 @@ const Movies = () => {
               </div>
             ))
           ) : currentValue == "YearAscending" ? (
+           
             movies
               .sort((a, b) => a.Year - b.Year)
               .map((element, index) => (
@@ -118,6 +120,7 @@ const Movies = () => {
                   </div>
                 </div>
               ))
+              
           ) : (
             movies
               .sort((a, b) => b.Year - a.Year)

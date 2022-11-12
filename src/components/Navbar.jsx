@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
     const navigate = useNavigate()
+
     return (
         <div className="navbar">
             <div className="navbar__wrapper">
@@ -11,7 +12,10 @@ const Nav = () => {
                     <img src={logo} alt="" className="logo" />
                 </figure>
                 <ul className="nav__link--lists">
-                    <li onClick={() => navigate("movies")}>Movies</li>
+                    <li onClick={() =>{
+                        navigate("movies")
+                        localStorage.removeItem("Title")
+                    }}>Movies</li>
                     <li onClick={() => navigate("trending")}>Trending</li>
                 </ul>
             </div>

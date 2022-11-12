@@ -40,6 +40,9 @@ li{
   font-weight: 500;
   cursor: pointer;
 }
+li:hover{
+  border-bottom: 1px solid white;
+}
 
 /*
   Movies.jsx

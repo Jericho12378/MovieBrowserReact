@@ -13,7 +13,7 @@ const Home = () => {
     }
   return ( 
     <>
-      <div className="home__wrapper">
+      <div className="home__wrapper" id="main">
         <h1 className="home__intro"><span className="intro"><span className="purple">
             EXPLORE</span> MOVIES HERE!!</span><br></br> Its free and <span className="purple">always </span> will be</h1>
         <div className="searchbar__wrapper">
