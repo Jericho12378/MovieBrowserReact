@@ -84,16 +84,15 @@ li:hover{
   bottom: 0;
   left: 148px
 }
-.movie__list{
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .movie__lists{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 .movie__list{
+  display: flex;
+  flex-wrap: wrap;
   margin: 24px;
   width: 240px;
   display: flex;
@@ -269,4 +268,97 @@ ChosenMovie.jsx
 .plot{
   margin-bottom: 16px;
   width: 480px;
+}
+/*
+  RESPONSIVE
+*/
+@media (max-width:480px){
+  .home__intro{
+    font-size: 18px;
+  }
+  .intro{
+    font-size: 28px;
+  }
+  .searchbar__wrapper{
+    width: 120px;
+    margin-top: 12px;
+  }
+  .home__searchbar{
+    font-size: 14px;
+    padding: 12px;
+    width: 280px;
+  }
+  .home__searchButton{
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+  .navbar{
+    width: 480px;
+  }
+  .navbar__wrapper{
+    padding: 24px;
+  }
+  li{
+    font-size: 16px;
+  }
+  .searchbar__wrapper{
+    width: 480px;
+    margin-bottom: 24px;
+  }
+  .input__field{
+    width: 240px;
+    padding: 8px;
+  }
+  .search__button{
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: 1px solid black;
+  }
+  .result{
+    left: 8px;
+  }
+  #filter{
+    right: 48px;
+    width: 98px;
+  }
+  .movie__list{
+    width: 112px;
+    margin: 12px;
+  }
+  .movie__image{
+    border-radius: 12px;
+  }
+  h4{
+    font-size: 12px;
+  }
+  .movie__image--skeleton{
+    width: 110px;
+    height: 180px;
+  }
+  .movie__data--skeleton{
+    width: 100px;
+  }
+  .specifiedMovie{
+    padding: 24px;
+    width: 480px;
+  }
+  .image{
+    width: 180px;
+    border-radius: 12px;
+  }
+  .title{
+    font-size: 18px;
+  }
+  .chosenMovie__image{
+    margin-right: 24px;
+  }
+  .plot, .actors, .chMoviedata{
+    width: 240px;
+  }
+  .chMovieImg{
+    width: 160px;
+    height: 210px;
+  }
 }

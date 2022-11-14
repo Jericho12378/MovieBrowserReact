@@ -73,6 +73,7 @@ const Movies = () => {
             type="text"
             className="input__field"
             id="movies__searchBar"
+            autoComplete="off"
           />
           <button
             className="search__button"

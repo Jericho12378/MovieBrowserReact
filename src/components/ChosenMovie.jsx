@@ -40,13 +40,13 @@ const ChosenMovie = () => {
         :
         (<div className="specifiedMovie">
             <div className="chosenMovie__image">
-              <img className="movie__image--skeleton" alt="" />
+              <img className="movie__image--skeleton chMovieImg" alt="" />
             </div>
             <div className="data">
                 <h3 className="title"></h3>
-                <p className="movie__data--skeleton"></p>
-                <p className="movie__data--skeleton"></p>
-                <p className="movie__data--skeleton"></p>
+                <p className="movie__data--skeleton chMoviedata"></p>
+                <p className="movie__data--skeleton chMoviedata"></p>
+                <p className="movie__data--skeleton chMoviedata"></p>
             </div>
           </div>)
         }
