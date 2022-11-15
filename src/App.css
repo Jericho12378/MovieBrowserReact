@@ -1,9 +1,10 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
 
 /*
 Nav.jsx
@@ -272,7 +273,7 @@ ChosenMovie.jsx
 /*
   RESPONSIVE
 */
-@media (max-width:415px){
+@media (max-width:412px){
   .home__intro{
     font-size: 18px;
   }
@@ -303,7 +304,7 @@ ChosenMovie.jsx
     font-size: 16px;
   }
   .searchbar__wrapper{
-    width: 480px;
+    width: 415px;
     margin-bottom: 24px;
   }
   .input__field{
@@ -318,16 +319,17 @@ ChosenMovie.jsx
   }
   .result{
     left: 24px;
+    font-size: 14px;
   }
   #filter{
-    right: 84px;
+    right: 52px;
     width: 98px;
   }
   .footer__links{
     margin-right: 12px;
   }
   .movie__list{
-    width: 112px;
+    width: 102px;
     margin: 12px;
   }
   .movie__image{
@@ -360,6 +362,7 @@ ChosenMovie.jsx
   }
   .plot, .actors, .chMoviedata{
     width: 180px;
+    font-size: 14px;
   }
   .chMovieImg{
     width: 160px;
