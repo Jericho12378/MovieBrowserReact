@@ -272,7 +272,7 @@ ChosenMovie.jsx
 /*
   RESPONSIVE
 */
-@media (max-width:480px){
+@media (max-width:415px){
   .home__intro{
     font-size: 18px;
   }
@@ -294,7 +294,7 @@ ChosenMovie.jsx
     border-radius: 8px;
   }
   .navbar{
-    width: 480px;
+    width: 415px;
   }
   .navbar__wrapper{
     padding: 24px;
@@ -317,11 +317,14 @@ ChosenMovie.jsx
     border: 1px solid black;
   }
   .result{
-    left: 8px;
+    left: 24px;
   }
   #filter{
-    right: 48px;
+    right: 84px;
     width: 98px;
+  }
+  .footer__links{
+    margin-right: 12px;
   }
   .movie__list{
     width: 112px;
@@ -341,9 +344,10 @@ ChosenMovie.jsx
     width: 100px;
   }
   .specifiedMovie{
-    padding: 24px;
-    width: 480px;
+    padding: 18px;
+    width: 415px;
   }
+
   .image{
     width: 180px;
     border-radius: 12px;
@@ -355,7 +359,7 @@ ChosenMovie.jsx
     margin-right: 24px;
   }
   .plot, .actors, .chMoviedata{
-    width: 240px;
+    width: 180px;
   }
   .chMovieImg{
     width: 160px;
