@@ -274,6 +274,9 @@ ChosenMovie.jsx
   RESPONSIVE
 */
 @media (max-width:412px){
+  .App{
+    width: 100vw;
+  }
   .home__intro{
     font-size: 18px;
   }
